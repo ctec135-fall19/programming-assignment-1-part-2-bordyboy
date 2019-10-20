@@ -10,23 +10,132 @@ namespace ProgrammingAssignmentPart2
     {
         static void Main(string[] args)
         {
-            #region class demonstration/help 
 
-            for(int printerPrintsCondition = 0; printerPrintsCondition <= 1; printerPrintsCondition++)
+
+
+            #region 1
+
+            for (int printerPrintsCondition = 0; printerPrintsCondition <= 1; 
+                printerPrintsCondition++)
             {
-                // cond2 = red light is flashing
-                for(int cond2=0; cond2<=1; cond2++)
+                
+                for (int redLightFlashing = 0; redLightFlashing <= 1;
+                    redLightFlashing++)
                 {
-                    for(int k=0; k < 2; k++)
+                    for (int printerIsRecognizedByComputer = 0;
+                        printerIsRecognizedByComputer < 2;
+                        printerIsRecognizedByComputer++)
                     {
-                        if(printerPrintsCondition == 0 && cond2==0 && k == 0)
+                        if (printerPrintsCondition == 0 && redLightFlashing
+                            == 0 && printerIsRecognizedByComputer == 0)
                         {
+                            Console.WriteLine();
+                            Console.WriteLine("If the printer doesn't print" +
+                                ", has a red light flashing, and is not " +
+                                "recognized by the computer, try these " +
+                                "actions: ");
+                            Console.WriteLine();
                             //call action methods
-                            Console.WriteLine("Print prints condition: ");
+                            Class1 praf = new Class1();
+                            praf.CheckPowerCable();
+                            praf.CheckPrinterComputerCable();
+                            praf.CheckPrinterSoftwareIsInstalled();
+                            Console.WriteLine();
                         }
 
-                        if(printerPrintsCondition == 0 && cond2 == 0 && k == 1){
+                        if (printerPrintsCondition == 0 && redLightFlashing
+                            == 0 && printerIsRecognizedByComputer == 1)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("If the printer doesn't print" +
+                                ", has a red light flashing, and is " +
+                                "recognized by the computer, try these " +
+                                "actions: ");
+                            Console.WriteLine();
                             //call action methods
+                            Class1 praf = new Class1();
+                            praf.CheckPaperJam();
+                            Console.WriteLine();
+                        }
+
+                        if (printerPrintsCondition == 0 && redLightFlashing
+                            == 1 && printerIsRecognizedByComputer == 1)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("If the printer doesn't print" +
+                                ", doesn't have a red light flashing, and is " +
+                                "not recognized by the computer, try these " +
+                                "actions: ");
+                            Console.WriteLine();
+                            //call action methods
+                            Class1 praf = new Class1();
+                            praf.CheckInk();
+                            praf.CheckPaperJam();
+                            Console.WriteLine();
+                        }
+
+                        if (printerPrintsCondition == 1 && redLightFlashing
+                            == 1 && printerIsRecognizedByComputer == 1)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("If the printer prints" +
+                                ", doesn't have a red light flashing, " +
+                                "and is " +
+                                "recognized by the computer, try these " +
+                                "actions: ");
+                            Console.WriteLine();
+                            //call action methods
+                            Class1 praf = new Class1();
+                            praf.CheckInk();
+                            Console.WriteLine();
+                        }
+
+                        if (printerPrintsCondition == 1 && redLightFlashing
+                            == 1 && printerIsRecognizedByComputer == 0)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("If the printer does print" +
+                                ", has a red light flashing, and is not" +
+                                "recognized by the computer, try these " +
+                                "actions: ");
+                            Console.WriteLine();
+                            //call action methods
+                            Class1 praf = new Class1();
+                            praf.CheckPrinterSoftwareIsInstalled();
+                            Console.WriteLine();
+                        }
+
+                        if (printerPrintsCondition == 1 && redLightFlashing
+                            == 0 && printerIsRecognizedByComputer == 0)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("If the printer does print" +
+                                ", doesn't have " +
+                                "a red light flashing, and is not " +
+                                "recognized by the computer, try these " +
+                                "actions: ");
+                            Console.WriteLine();
+                            //call action methods
+                            Class1 praf = new Class1();
+                            praf.CheckPrinterSoftwareIsInstalled();
+                            Console.WriteLine();
+                        }
+
+                        if (printerPrintsCondition == 0 && redLightFlashing
+                            == 1 && printerIsRecognizedByComputer == 0)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("If the printer doesn't print" +
+                                ", has a red light flashing, and is not " +
+                                "recognized by the computer, try these " +
+                                "actions: ");
+                            Console.WriteLine();
+                            //call action methods
+                            Class1 praf = new Class1();
+                            praf.CheckPrinterComputerCable();
+                            praf.CheckPrinterSoftwareIsInstalled();
+                            praf.CheckInk();
+                            Console.WriteLine();
                         }
                     }
                 }
@@ -34,9 +143,10 @@ namespace ProgrammingAssignmentPart2
 
             #endregion
 
+
             #region region 2
 
-            for(int i=0; i <=7; i++)
+            for (int i=0; i <=7; i++)
             {
                 switch (i)
                 {
@@ -54,10 +164,7 @@ namespace ProgrammingAssignmentPart2
 
 
         }
+        
 
-        public void CheckInk()
-        {
-            Console.WriteLine("Check ink and replace if empty.");
-        }
     }
 }
